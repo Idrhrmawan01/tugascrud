@@ -1,5 +1,6 @@
 <?php
 include_once 'koneksi.php';
+include ('login_session.php');
 
 $sql='SELECT * FROM artikel order by tanggal DESC';
 $result = mysqli_query($conn, $sql);
@@ -9,7 +10,7 @@ include('sidebar.php');
 
 if ($result):
 	?> 
-	<a href="?mod=admin/tambah" class="btn btn-large"> Tambah artikel </a>
+	<a href="tambah.php" class="btn btn-large"> Tambah artikel </a>
 	<table>
 		<tr>
 			<th> Judul </th>
